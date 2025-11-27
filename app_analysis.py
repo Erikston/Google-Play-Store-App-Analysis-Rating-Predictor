@@ -49,7 +49,7 @@ def load_data():
 
 # ---- EDA & VISUALIZATION ----
 def show_eda(df):
-    st.header("ðŸ“Š Exploratory Data Analysis")
+    st.header("Exploratory Data Analysis")
     
     # 1. Top Categories
     st.subheader("Top 10 App Categories")
@@ -75,7 +75,7 @@ def show_eda(df):
 
 # ---- MACHINE LEARNING (Rating Prediction) ----
 def predict_ratings(df):
-    st.header("ðŸ¤– Rating Prediction Model")
+    st.header("Rating Prediction Model")
     
     # Prepare features
     features = ['Category', 'Reviews', 'Installs', 'Price', 'Size']
@@ -135,11 +135,11 @@ def predict_ratings(df):
         input_data = input_data[X.columns]
         
         prediction = model.predict(input_data)
-        st.success(f"Predicted Rating: {prediction[0]:.1f} â­ (out of 5)")
+        st.success(f"Predicted Rating: {prediction[0]:.1f}  (out of 5)")
 
 # ---- STREAMLIT APP ----
 def main():
-    st.title("ðŸ“± Google Play Store App Analysis")
+    st.title("Google Play Store App Analysis")
     
     # Load data
     df = load_data()
